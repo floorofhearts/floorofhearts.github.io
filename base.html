@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    <link rel="stylesheet" href="styles.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="contact-info">
+                <p>8 Wood Street, Swindon, SN1 4AB</p>
+                <p><a href="tel:+447957770194">📞 07957 770194</a></p>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="navigation">
+            <a href="#">LVT</a>
+            <a href="#">Engineered Wood</a>
+            <a href="#">Carpets</a>
+            <a href="#">Laminates</a>
+            <a href="#">Sisal</a>
+            <a href="#">Flatweaves</a>
+            <a href="#">Stair Runners</a>
+            <a href="#">Taping</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Floor Of Hearts</p>
+    </footer>
+
+    {% block scripts %}
+    <script src="main.js"></script>
+    {% endblock %}
+</body>
+</html>

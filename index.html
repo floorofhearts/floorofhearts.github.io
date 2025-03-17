@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flooring Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <div class="logo">
+            <img id="logo" src="logo.png" alt="Company Logo">
+        </div>
+
+        <div class="contact-info">
+            <p>8 Wood Street, Swindon, SN1 4AB</p>
+            <p><a href="tel:+447957770194">📞 07957 770194</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="https://via.placeholder.com/20x20?text=FB" alt="Facebook"></a>
+                <a href="#"><img src="https://via.placeholder.com/20x20?text=IG" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <div class="navigation">
+        <a href="#">LVT</a>
+        <a href="#">Engineered Wood</a>
+        <a href="#">Carpets</a>
+        <a href="#">Laminates</a>
+        <a href="#">Sisal</a>
+        <a href="#">Flatweaves</a>
+        <a href="#">Stair Runners</a>
+        <a href="#">Taping</a>
+    </div>
+    
+    <!-- Image Carousel -->
+    <div class="carousel">
+        <span class="arrow arrow-left" onclick="prevSlide()">&#10094;</span>
+        <img src="https://via.placeholder.com/800x300" class="active" alt="Slide 1">
+        <img src="https://via.placeholder.com/800x300" alt="Slide 2">
+        <img src="https://via.placeholder.com/800x300" alt="Slide 3">
+        <img src="https://via.placeholder.com/800x300" alt="Slide 4">
+        <img src="https://via.placeholder.com/800x300" alt="Slide 5">
+        <span class="arrow arrow-right" onclick="nextSlide()">&#10095;</span>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+    
+    <!-- Partner Logos Scrolling -->
+    <section>
+  <div class="marquee marquee--fit-content">
+    <ul class="marquee__content">
+      <li><img src="https://placehold.co/100x100" alt="Company 1"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 2"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 3"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 4"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 5"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 6"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 7"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 8"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 9"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 10"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 11"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 12"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 13"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 14"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 15"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 16"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 17"></li>
+      <li><img src="https://placehold.co/100x100" alt="Company 18"></li>
+    </ul>
+
+    <ul aria-hidden="true" class="marquee__content">
+        <li><img src="https://placehold.co/100x100" alt="Company 1"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 2"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 3"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 4"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 5"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 6"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 7"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 8"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 9"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 10"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 11"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 12"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 13"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 14"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 15"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 16"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 17"></li>
+        <li><img src="https://placehold.co/100x100" alt="Company 18"></li>
+    </ul>
+  </div>
+</section>
+
+
+
+    
+    
+    <!-- Main Content Section -->
+    <div class="content">
+        <div class="card">
+            <h3>Flooring Types</h3>
+            <p>Explore our range of flooring types including LVT, Engineered Wood, Carpets, Laminates, Sisal, Flatweaves, Stair Runners, and Taping.</p>
+            <img id="types-bg"src="https://placehold.co/250x400" alt="Flooring Types">
+            <button>Browse</button>
+        </div>
+        <div class="card">
+            <h3>About Us</h3>
+        </div>
+        <div class="card">
+            <h3>Other Info</h3>
+        </div>
+    </div>
+    
+    <!-- Reviews Section -->
+    <div class="checkatrade-reviews">
+        <h2>Customer Reviews from Checkatrade</h2>
+    
+        <div class="review">
+            <p class="review-text">"Luke paid a visit to undertake a quotation, very professional, quotation reasonable and we have accepted for Floor of Hearts to undertake the work in early June."</p>
+            <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            <p class="review-author">25/04/24</p>
+        </div>
+    
+        <div class="review2">
+            <p class="review-text">"Luke & Louise are a great team. Together they couldn’t work any harder to give customer satisfaction . Friendly, efficient, reliable, & caring. We will definitely look forward to their expert help & advise , when we are ready to have the rest of our home fully fitted with wood flooring."</p>
+            <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            <p class="review-author">30/12/24</p>
+        </div>
+    
+        <div class="review3">
+            <p class="review-text">"Luke was excellent from start to finish, the price was really fair yet the workmanship was top class, we are really happy with our new front room carpet and will deffo be using again!"</p>
+            <p class="review-rating">⭐⭐⭐⭐⭐</p>
+            <p class="review-author">04/09/24</p>
+        </div>
+    
+        <a class="cta-button" href="https://www.checkatrade.com/trades/floorofheartsltd" target="_blank">See More Reviews</a>
+    </div>
+
+    <!-- JavaScript for Carousel Functionality -->
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel img');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function currentSlide(index) {
+            currentIndex = index;
+            showSlide(currentIndex);
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        slideInterval = setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
