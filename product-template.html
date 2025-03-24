@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floor Of Hearts</title>
+    <title>{{ Product Name }} - Floor Of Hearts</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
 </head>
 <body>
     <!-- Header Section -->
-    <div class="header">
+    <header class="header">
         <div class="search-bar">
             <input type="text" placeholder="Search...">
             <button type="button">
@@ -25,25 +25,59 @@
             <p>8 Wood Street, Swindon, SN1 4AB</p>
             <p><a href="tel:+447957770194" style="color: black; text-decoration: none;">📞 07957 770194</a></p>
             <div class="social-icons">
-                <a href="https://www.facebook.com/FloorOfHearts/"><img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/476/small_2x/facebook-logo-facebook-icon-transparent-free-png.png" width="54" height="54" alt="Facebook"></a>
-                <a href="https://www.instagram.com/floorofhearts/"><img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" width="54" height="57" style="position: relative; top: 2.5px;" alt="Instagram"></a>
+                <a href="https://www.facebook.com/FloorOfHearts/">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/476/small_2x/facebook-logo-facebook-icon-transparent-free-png.png" width="30" height="30" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/floorofhearts/">
+                    <img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" width="30" height="30" alt="Instagram">
+                </a>
             </div>
         </div>
-    </div>
+    </header>
     
     <!-- Navigation Menu -->
-    <div class="navigation">
+    <nav class="navigation">
         <a href="/LVT.html">LVT</a>
         <a href="/engineered.html">Engineered Wood</a>
         <a href="/carpets.html">Carpets</a>
         <a href="/laminates.html">Laminates</a>
         <a href="/sisal.html">Sisal</a>
-        <a href="/flatweaves.html"><strong>Flatweaves</strong></a>
+        <a href="/flatweaves.html">Flatweaves</a>
         <a href="/runners.html">Stair Runners</a>
         <a href="/taping.html">Taping</a>
-    </div>
-    
+    </nav>
 
+    <!-- Main Content Section -->
+    <main class="product-page">
+        <h1 class="product-title">{{ Product Name }}</h1>
+        <p class="product-description">
+            {{ Product Description }}
+        </p>
+
+        <!-- Product Images -->
+        <div class="product-images">
+            <img src="placeholder1.jpg" alt="{{ Product Name }} Image 1" class="product-image">
+            <img src="placeholder2.jpg" alt="{{ Product Name }} Image 2" class="product-image">
+        </div>
+
+        <!-- Product Features -->
+        <section class="product-features">
+            <h2>Features</h2>
+            <ul>
+                <li>{{ Feature 1 }}</li>
+                <li>{{ Feature 2 }}</li>
+                <li>{{ Feature 3 }}</li>
+                <li>{{ Feature 4 }}</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <a href="contact.html" class="cta-button">Contact Us for More Information</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <!-- Navigation Links -->
@@ -86,9 +120,5 @@
             <p>&copy; 2025 Floor Of Hearts. All rights reserved.</p>
         </div>
     </footer>
-    
-    </body>
-    </html>
-    
-    
-    
+</body>
+</html>

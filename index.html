@@ -6,12 +6,16 @@
     <title>Floor Of Hearts</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Header Section -->
     <div class="header">
         <div class="search-bar">
             <input type="text" placeholder="Search...">
+            <button type="button">
+                <img id="search-img" src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon" width="21" height="21">
+            </button>
         </div>
 
         <div class="logo">
@@ -39,15 +43,16 @@
         <a href="/runners.html">Stair Runners</a>
         <a href="/taping.html">Taping</a>
     </div>
+
     
     <!-- Image Carousel -->
     <div class="carousel">
         <span class="arrow arrow-left" onclick="prevSlide()">&#10094;</span>
-        <img src="https://via.placeholder.com/800x300" class="active" alt="Slide 1">
-        <img src="https://via.placeholder.com/800x300" alt="Slide 2">
-        <img src="https://via.placeholder.com/800x300" alt="Slide 3">
-        <img src="https://via.placeholder.com/800x300" alt="Slide 4">
-        <img src="https://via.placeholder.com/800x300" alt="Slide 5">
+        <img src="https://placehold.co/800x350" class="active" alt="Slide 1">
+        <img src="https://placehold.co/800x250" alt="Slide 2">
+        <img src="https://placehold.co/800x300" alt="Slide 3">
+        <img src="https://placehold.co/800x300" alt="Slide 4">
+        <img src="https://placehold.co/800x300" alt="Slide 5">
         <span class="arrow arrow-right" onclick="nextSlide()">&#10095;</span>
         <div class="dots">
             <span class="dot active" onclick="currentSlide(0)"></span>
@@ -109,7 +114,7 @@
 
     
     
-    <!-- Main Content Section -->
+<!-- Main Content Section -->
     <div class="content">
         <div class="card">
             <h3>Flooring Types</h3>
@@ -128,34 +133,32 @@
             </div>
             </div>
         </div>
-        
-        
     </div>
     
     <!-- Reviews Section -->
-    <div class="checkatrade-reviews">
-        <h2>Customer Reviews from Checkatrade</h2>
-    
-        <div class="review">
-            <p class="review-text">"Luke paid a visit to undertake a quotation, very professional, quotation reasonable and we have accepted for Floor of Hearts to undertake the work in early June."</p>
-            <p class="review-rating">⭐⭐⭐⭐⭐</p>
-            <p class="review-author">25/04/24</p>
-        </div>
-    
-        <div class="review2">
-            <p class="review-text">"Luke & Louise are a great team. Together they couldn’t work any harder to give customer satisfaction . Friendly, efficient, reliable, & caring. We will definitely look forward to their expert help & advise , when we are ready to have the rest of our home fully fitted with wood flooring."</p>
-            <p class="review-rating">⭐⭐⭐⭐⭐</p>
-            <p class="review-author">30/12/24</p>
-        </div>
-    
-        <div class="review3">
-            <p class="review-text">"Luke was excellent from start to finish, the price was really fair yet the workmanship was top class, we are really happy with our new front room carpet and will deffo be using again!"</p>
-            <p class="review-rating">⭐⭐⭐⭐⭐</p>
-            <p class="review-author">04/09/24</p>
-        </div>
-    
-        <a class="cta-button" href="https://www.checkatrade.com/trades/floorofheartsltd" target="_blank">See More Reviews</a>
+<div class="checkatrade-reviews">
+    <h2>Customer Reviews from Checkatrade</h2>
+
+    <div class="review-card">
+        <p class="review-text">"Luke paid a visit to undertake a quotation, very professional, quotation reasonable and we have accepted for Floor of Hearts to undertake the work in early June."</p>
+        <p class="review-rating">⭐⭐⭐⭐⭐</p>
+        <p class="review-author">25/04/24</p>
     </div>
+
+    <div class="review-card">
+        <p class="review-text">"Luke & Louise are a great team. Together they couldn’t work any harder to give customer satisfaction. Friendly, efficient, reliable, & caring. We will definitely look forward to their expert help & advice when we are ready to have the rest of our home fully fitted with wood flooring."</p>
+        <p class="review-rating">⭐⭐⭐⭐⭐</p>
+        <p class="review-author">30/12/24</p>
+    </div>
+
+    <div class="review-card">
+        <p class="review-text">"Luke was excellent from start to finish, the price was really fair yet the workmanship was top class. We are really happy with our new front room carpet and will definitely be using them again!"</p>
+        <p class="review-rating">⭐⭐⭐⭐⭐</p>
+        <p class="review-author">04/09/24</p>
+    </div>
+
+    <a class="cta-button" href="https://www.checkatrade.com/trades/floorofheartsltd" target="_blank">See More Reviews</a>
+</div>
 
     <!-- JavaScript for Carousel Functionality -->
     <script>
@@ -190,6 +193,7 @@
         slideInterval = setInterval(nextSlide, 5000);
     </script>
 
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
         <!-- Navigation Links -->

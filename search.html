@@ -38,9 +38,18 @@
         <a href="/carpets.html">Carpets</a>
         <a href="/laminates.html">Laminates</a>
         <a href="/sisal.html">Sisal</a>
-        <a href="/flatweaves.html"><strong>Flatweaves</strong></a>
+        <a href="/flatweaves.html">Flatweaves</a>
         <a href="/runners.html">Stair Runners</a>
         <a href="/taping.html">Taping</a>
+    </div>
+
+    <div>
+        <h1 style="position: relative; left: 10px;">Results for: </h1>
+        <p style="position: relative; left: 11px;"><span id="search-query"></span></p>
+    </div>
+
+    <div id="results" class="results" style="position: relative; left: 10px;">
+
     </div>
     
 
@@ -91,4 +100,63 @@
     </html>
     
     
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const query = new URLSearchParams(window.location.search).get("search");
+    if (query) {
+        document.getElementById("search-query").textContent = decodeURIComponent(query);
+    }
+
+    const pages = [
+        { name: "LVT", image: "images/lvt.jpg" },
+        { name: "Engineered Wood", image: "images/engineered-wood.jpg" },
+        { name: "Carpets", image: "images/carpets.jpg" },
+        { name: "Laminates", image: "images/laminates.jpg" },
+        { name: "Sisal", image: "images/sisal.jpg" },
+        { name: "Flatweaves", image: "images/flatweaves.jpg" },
+        { name: "Stair Runners", image: "images/stair-runners.jpg" },
+        { name: "Taping", image: "images/taping.jpg" }    ];
+
+    const resultsContainer = document.getElementById("results");
+
+    if (query) {
+        const results = pages.filter(page => page.name.toLowerCase().includes(query.toLowerCase()));
+        if (results.length > 0) {
+            results.forEach(result => {
+                const resultCard = document.createElement("div");
+                resultCard.classList.add("result-card");
+
+                const image = document.createElement("img");
+                image.src = result.image;
+                image.alt = result.name;
+                image.classList.add("result-image");
+
+                const title = document.createElement("h3");
+                title.textContent = result.name;
+
+                const link = document.createElement("a");
+                if (result.name === "LVT") {
+                    link.href = "/LVT.html";
+                } else if (result.name === "Stair Runners") {
+                    link.href = "/runners.html";
+                } else {
+                link.href = `/${result.name.toLowerCase().replace(" ", "")}.html`;
+                } 
+                link.textContent = "View More";
+            
+                link.classList.add("result-link");
+
+                resultCard.appendChild(image);
+                resultCard.appendChild(title);
+                resultCard.appendChild(link);
+                resultsContainer.appendChild(resultCard);
+            });
+        } else {
+            const noResults = document.createElement("p");
+            noResults.textContent = "No results found.";
+            resultsContainer.appendChild(noResults);
+        }
+    }
+});
+    </script>
+
