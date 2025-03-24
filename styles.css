@@ -564,3 +564,68 @@ section {
   background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+  /* Header Section */
+  .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  #logo {
+      transform: translateX(0); /* Center the logo */
+      margin: 10px 0;
+  }
+
+  .search-bar {
+      margin-bottom: 10px;
+  }
+
+  .contact-info {
+      text-align: center;
+  }
+
+  .social-icons {
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigation Menu */
+  .navigation {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+  }
+
+  .navigation a {
+      display: inline-block;
+      margin: 5px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Main Content Section */
+  .content {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .card {
+      width: 100%; /* Make cards full-width */
+      margin-bottom: 20px;
+  }
+
+  .about-us-card img {
+      width: 100%; /* Make images responsive */
+      height: auto;
+  }
+
+  .about-us-button {
+      font-size: 14px;
+      padding: 10px 15px;
+  }
+}
