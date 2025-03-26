@@ -3,34 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floor Of Hearts</title>
+    <title>Search Results | Floor Of Hearts</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
 </head>
 <body>
     <!-- Header Section -->
     <div class="header">
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="button">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">
                 <img id="search-img" src="https://cdn-icons-png.flaticon.com/512/622/622669.png" alt="Search Icon" width="21" height="21">
             </button>
         </div>
-
         <div class="logo">
             <a href="/"><img id="logo" src="logo.png" alt="Floor Of Hearts Logo"></a>
         </div>
-
         <div class="contact-info">
             <p>8 Wood Street, Swindon, SN1 4AB</p>
             <p><a href="tel:+447957770194" style="color: black; text-decoration: none;">📞 07957 770194</a></p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/FloorOfHearts/"><img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/476/small_2x/facebook-logo-facebook-icon-transparent-free-png.png" width="54" height="54" alt="Facebook"></a>
-                <a href="https://www.instagram.com/floorofhearts/"><img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" width="54" height="57" style="position: relative; top: 2.5px;" alt="Instagram"></a>
-            </div>
         </div>
     </div>
-    
+
     <!-- Navigation Menu -->
     <div class="navigation">
         <a href="/LVT.html">LVT</a>
@@ -43,19 +36,15 @@
         <a href="/taping.html">Taping</a>
     </div>
 
+    <!-- Search Results Section -->
     <div>
-        <h1 style="position: relative; left: 10px;">Results for: </h1>
-        <p style="position: relative; left: 11px;"><span id="search-query"></span></p>
+        <h1>Results for: <span id="search-query"></span></h1>
     </div>
+    <div id="results" class="results"></div>
 
-    <div id="results" class="results" style="position: relative; left: 10px;">
-
-    </div>
-    
-
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Navigation Links -->
             <div class="footer-nav">
                 <h3>Quick Links</h3>
                 <div class="quick-links">
@@ -70,90 +59,64 @@
                     <a href="/aboutus.html">About Us</a>
                 </div>
             </div>
-    
-            <!-- Contact Information -->
             <div class="footer-contact">
                 <h3>Contact Us</h3>
                 <p>8 Wood Street, Swindon, SN1 4AB</p>
-                <p><a style="color: rgb(218, 216, 216); text-decoration: none;" href="tel:+447957770194">📞 07957 770194</a></p>
+                <p><a href="tel:+447957770194" style="color: rgb(218, 216, 216); text-decoration: none;">📞 07957 770194</a></p>
             </div>
-    
-            <!-- Social Media Links -->
-            <div class="footer-social">
-                <h3>Follow Us</h3>
-                <a href="https://www.facebook.com/FloorOfHearts/">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/018/930/476/small_2x/facebook-logo-facebook-icon-transparent-free-png.png" width="30" height="30" alt="Facebook">
-                </a>
-                <a href="https://www.instagram.com/floorofhearts/">
-                    <img src="https://static.vecteezy.com/system/resources/previews/042/148/632/non_2x/instagram-logo-instagram-social-media-icon-free-png.png" width="30" height="30" alt="Instagram">
-                </a>
-            </div>
-        </div>
-    
-        <!-- Copyright -->
-        <div class="footer-copyright">
-            <p>&copy; 2025 Floor Of Hearts. All rights reserved.</p>
         </div>
     </footer>
-    
-    </body>
-    </html>
-    
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const query = new URLSearchParams(window.location.search).get("search");
-    if (query) {
-        document.getElementById("search-query").textContent = decodeURIComponent(query);
-    }
+            const query = new URLSearchParams(window.location.search).get("search");
+            const resultsContainer = document.getElementById("results");
+            const searchQueryElement = document.getElementById("search-query");
 
-    const pages = [
-        /* { name: "LVT", image: "images/lvt.jpg" },
-        { name: "Engineered Wood", image: "images/engineered-wood.jpg" },
-        { name: "Carpets", image: "images/carpets.jpg" },
-        { name: "Laminates", image: "images/laminates.jpg" },
-        { name: "Sisal", image: "images/sisal.jpg" },
-        { name: "Flatweaves", image: "images/flatweaves.jpg" },
-        { name: "Stair Runners", image: "images/stair-runners.jpg" },
-        { name: "Taping", image: "images/taping.jpg" }    ];
-        */
-       { name: "J2 - Rustic Oak", image: "images/RT01.jpg", url: "/lvt/rt01-rustic-oak.html" },
-       { name: "J2 - Taupe Brushed Oak", image: "images/NT45.jpg" },
-       { name: "J2 - Carpenters Oak", image: "images/NTP43.jpg" } ];
-    const resultsContainer = document.getElementById("results");
+            // Sample product data
+            const pages = [
+                { name: "J2 - Rustic Oak", image: "images/RT01.jpg", url: "/lvt/rt01-rustic-oak.html" },
+                { name: "J2 - Taupe Brushed Oak", image: "images/NT45.jpg", url: "/lvt/taupe-brushed-oak.html" },
+                { name: "J2 - Golden Oak", image: "images/RTP02.jpg", url: "/lvt/golden-oak.html" },
+                { name: "J2 - Carpenters Oak", image: "images/NTP43.jpg", url: "/lvt/carpenters-oak.html" }
+            ];
 
-    if (query) {
-        const results = pages.filter(page => page.name.toLowerCase().includes(query.toLowerCase()));
-        if (results.length > 0) {
-            results.forEach(result => {
-                const resultCard = document.createElement("div");
-                resultCard.classList.add("result-card");
+            if (query) {
+                searchQueryElement.textContent = decodeURIComponent(query);
 
-                const image = document.createElement("img");
-                image.src = result.image;
-                image.alt = result.name;
-                image.classList.add("result-image");
+                // Filter results based on the query
+                const results = pages.filter(page => page.name.toLowerCase().includes(query.toLowerCase()));
 
-                const title = document.createElement("h3");
-                title.textContent = result.name;
+                if (results.length > 0) {
+                    results.forEach(result => {
+                        const resultCard = document.createElement("div");
+                        resultCard.classList.add("result-card");
 
-                const link = document.createElement("a");
-                link.href = `${result.url || "/search.html"}?search=${encodeURIComponent(result.name)}`;
-                link.textContent = "View More";
-            
-                link.classList.add("result-link");
+                        const image = document.createElement("img");
+                        image.src = result.image;
+                        image.alt = result.name;
+                        image.classList.add("result-image");
 
-                resultCard.appendChild(image);
-                resultCard.appendChild(title);
-                resultCard.appendChild(link);
-                resultsContainer.appendChild(resultCard);
-            });
-        } else {
-            const noResults = document.createElement("p");
-            noResults.textContent = "No results found.";
-            resultsContainer.appendChild(noResults);
-        }
-    }
-});
+                        const title = document.createElement("h3");
+                        title.textContent = result.name;
+
+                        const link = document.createElement("a");
+                        link.href = result.url;
+                        link.textContent = "View More";
+                        link.classList.add("result-link");
+
+                        resultCard.appendChild(image);
+                        resultCard.appendChild(title);
+                        resultCard.appendChild(link);
+                        resultsContainer.appendChild(resultCard);
+                    });
+                } else {
+                    const noResults = document.createElement("p");
+                    noResults.textContent = "No results found.";
+                    resultsContainer.appendChild(noResults);
+                }
+            }
+        });
     </script>
-
+</body>
+</html>

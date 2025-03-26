@@ -1,11 +1,34 @@
+done:
+
 change nav-bar & lvt nav-bar to be more fluent and inline
+
+
+
+
+
+
+in progress:
 
 set up seperate lvt pages 
 
-template the pages for use across all products
-
-tidy things up so its easier to manage
-
 make the search function grab from a dynamic db and not a hardcoded db. 
 
+template the pages for use across all products
+
+
+
+
+up next:
+
+
+
+
+
+
+
+
+backlog:
+
 be able to control the database remotely using a web tool so stock/products can be added and removed easily.
+
+tidy things up so its easier to manage
