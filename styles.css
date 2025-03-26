@@ -19,7 +19,7 @@ html, body {
     align-items: center;
     padding: 10px 20px;
     background-color: #f8f8f8;
-}
+  }
 
 #logo {
     width: 160px;
@@ -29,7 +29,7 @@ html, body {
     margin: 0 auto;
     top: 0;
     top: -10px;
-    transform: translateX(40%);
+    transform: translateX(20%);
 }
 .logo:hover {
     color: #0073e6;
@@ -79,15 +79,15 @@ html, body {
 }
 
 .navigation a:hover {
-  background-color: #0073e6; /* Blue background on hover */
+  background-color: #606060; /* Blue background on hover */
   color: #fff; /* Ensure text remains white */
   transform: scale(1.1); /* Slight zoom effect */
 }
 
 .navigation a.active {
-  background-color: #005bb5; /* Highlight the active link */
+  background-color: #606060; /* Highlight the active link */
   color: #fff;
-  border: 1px solid #004494; /* Add a border to the active link */
+  border: 1px solid #606060; /* Add a border to the active link */
 }
 
 .lvt-nav {
@@ -96,6 +96,82 @@ html, body {
     background-color: #9a9696;
     padding: 10px;
     font-weight: bold;
+}
+
+.lvt-products {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.dropdown {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 96%; /* Position below the parent link */
+  left: 170px; /* Center horizontally under the parent */
+  transform: translateX(-50%); /* Adjust for perfect centering */
+  background-color: #444; /* Dropdown background color */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  animation: dropdown-slide 0.3s ease forwards; /* Slide-down animation */
+  white-space: nowrap; /* Prevent wrapping of links */
+  flex-direction: column; /* Stack links vertically */
+}
+
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  display: block; /* Display links as block elements for vertical stacking */
+  margin: 5px 0; /* Add spacing between links */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+  background-color: #9ca1ac; /* Highlight on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown-parent:hover + .dropdown,
+.dropdown:hover {
+  display: flex; /* Show the dropdown */
+  flex-direction: column; /* Ensure links are stacked vertically */
+}
+
+/* Show dropdown on hover */
+.dropdown-parent-active:hover + .dropdown,
+.dropdown:hover {
+  display: flex; /* Show the dropdown */
+  flex-direction: column; /* Ensure links are stacked vertically */
+  background-color: #606060; /* Highlight the active link */
+  color: #fff;
+  border: 1px solid #606060; /* Add a border to the active link */
+}
+
+.dropdown-parent-active {
+  background-color: #606060; /* Highlight the active link */
+  color: #fff;
+  border: 1px solid #606060; /* Add a border to the active link */
+}
+
+/* Dropdown Slide-Down Animation */
+@keyframes dropdown-slide {
+  from {
+      opacity: 0;
+      transform: translateY(-10px); /* Start slightly above */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* End at the correct position */
+  }
 }
 
 /* Image Carousel */
@@ -383,7 +459,7 @@ html, body {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background: #0073e6;
+  background: #848484;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -568,7 +644,7 @@ section {
 .about-us-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #8c8c8c;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -577,7 +653,7 @@ section {
 }
 
 .about-us-button:hover {
-  background-color: #0056b3;
+  background-color: #828282;
 }
 
 @media (max-width: 768px) {
@@ -634,7 +710,7 @@ section {
   right: 10px;
   top: 40%;
   transform: translateY(-548%);
-  background-color: #0073e6;
+  background-color: #828282;
   color: white;
   border: none;
   border-radius: 50%;
@@ -651,7 +727,7 @@ section {
 
 
 .search-bar button:hover {
-  background-color: #005bb5;
+  background-color: #828282;
   transform: scale(1.1);
 }
 
@@ -747,10 +823,13 @@ nav a:hover {
 /* Main Content */
 /* Center the product page */
 .product-page {
-  max-width: 800px; /* Set a maximum width */
-  margin: 0 auto; /* Center the container */
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
   padding: 20px; /* Add padding for spacing */
-  text-align: center; /* Center-align the text */
+  text-align: center; /* Center-align the text inside the container */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
 /* Center the product images */
@@ -786,7 +865,7 @@ nav a:hover {
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #828282;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -960,7 +1039,7 @@ nav a:hover {
 .result-link {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007BFF;
+  background-color: #828282;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -969,7 +1048,7 @@ nav a:hover {
 }
 
 .result-link:hover {
-  background-color: #0056b3;
+  background-color: #969696;
 }
 
 /* Favicon Styling */
@@ -1013,4 +1092,273 @@ nav a:hover {
   color: white;
   background-color: #005bb5; /* Highlight the active link */
   border: 1px solid #004494; /* Add a border to the active link */
+}
+
+/* LVT Product Section */
+.lvt-products {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lvt-products h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.lvt-products p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Product Grid */
+.lvt-product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Individual Product Card */
+.lvt-product {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  text-align: center;
+}
+
+.lvt-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.lvt-product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Product Text */
+.product-text {
+  padding: 15/* LVT Product Section */
+}
+
+.lvt-fluent-menu {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.menu-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-option {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-content h4 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.option-content p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.lvt-products {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lvt-products h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.lvt-products p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Product Grid */
+.lvt-product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+/* Individual Product Card */
+.lvt-product {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  text-align: center;
+}
+
+.lvt-product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image */
+.lvt-product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Product Text */
+.product-text {
+  padding: 15px;
+}
+
+/* Product Page Layout */
+.product-page {
+  display: flex;
+  gap: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.sidebar label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.sidebar input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Product Grid Styling */
+.product-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product h4 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.product p {
+  font-size: 24px;
+  color: #666;
+}
+
+#prod-id {
+  font-size: 16px;
+  color: #999;
+}
+
+/* View Product Button */
+.view-product-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #848383;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-product-btn:hover {
+  background-color: #757474;
+  transform: scale(1.05);
+}
+
+.view-product-btn:active {
+  transform: scale(0.95);
 }

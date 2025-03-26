@@ -33,7 +33,11 @@
     
     <!-- Navigation Menu -->
     <div class="navigation">
-        <a href="/LVT.html"><strong>LVT</strong></a>
+        <a href="/LVT.html" class="dropdown-parent-active">LVT</a>
+        <div class="dropdown">
+            <a href="/lvt/glue-down.html">Glue Down</a>
+            <a href="/lvt/click.html">Click</a>
+        </div>
         <a href="/engineered.html">Engineered Wood</a>
         <a href="/carpets.html">Carpets</a>
         <a href="/laminates.html">Laminates</a>
@@ -44,7 +48,10 @@
     </div>
 
     <!-- Main Content Section -->
-    <!-- LVT Navigation Menu -->
+
+    <!-- 
+
+    LVT Navigation Menu     
     <div class="lvt-navigation">
         <h2>Types of LVT</h2>
         <ul>
@@ -56,12 +63,104 @@
         </ul>
     </div>
 
-    <!-- LVT Product Section -->
+    -->
+
+
+    <div class="lvt-products">
+        <h2>Explore Our LVT Products</h2>
+        <p>Discover a wide range of luxury vinyl tiles to suit your style and needs. Click on the categories below to explore specific types of LVT flooring.</p>
+        <div class="lvt-product-grid">
+            <a href="/lvt/herringbone.html" class="lvt-product">
+                <img src="https://www.lumberkingflooring.co.uk/media/catalog/product/cache/60910f2f626b0e0797dc218449122a7f/d/u/duchess-bora-rigid-core-click-luxury-vinyl-tile-lvt-flooring-1.jpg" alt="Herringbone LVT">
+                <div class="product-text">
+                    <h3>Herringbone</h3>
+                    <p>Classic and timeless, herringbone LVT is perfect for any room.</p>
+                </div>
+            </a>
+            <a href="/lvt/chevron.html" class="lvt-product">
+                <img src="https://www.directwoodflooring.co.uk/media/catalog/product/cache/43942d99e4560257de5108a0f0547660/s/3/s32883i_signature_chevron_oyster_oak_lifestyle.jpg" alt="Chevron LVT">
+                <div class="product-text">
+                    <h3>Chevron</h3>
+                    <p>Make a statement with chevron LVT flooring.</p>
+                </div>
+            </a>
+            <a href="/lvt/plank.html" class="lvt-product">
+                <img src="https://www.floorbay.co.uk/wp-content/uploads/2024/10/alva-ash-brown-plank-room-shot.webp" alt="Plank LVT">
+                <div class="product-text">
+                    <h3>Plank</h3>
+                    <p>Get the look of real wood with plank LVT flooring.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- 
+    
+    LVT Product Section 
     <div class="lvt-products">
         <h2>Explore Our LVT Products</h2>
         <p>Discover a wide range of luxury vinyl tiles to suit your style and needs. Click on the categories above to explore specific types of LVT flooring.</p>
+        <div class="lvt-fluent-menu">
+            <h3>Choose Your LVT Type</h3>
+            <div class="menu-options">
+                <a href="/lvt/click.html" class="menu-option">
+                    <div class="option-content">
+                        <h4>Click</h4>
+                        <p>Easy to install with a click-lock system.</p>
+                    </div>
+                </a>
+                <a href="/lvt/glue-down.html" class="menu-option">
+                    <div class="option-content">
+                        <h4>Glue Down</h4>
+                        <p>Durable and secure with adhesive application.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
+-->
 
+<div class="product-page">
+    <!-- Sidebar for Filtering -->
+    <aside class="sidebar">
+        <h3>Filter Options</h3>
+        <form id="filter-form">
+            <label>
+                <input type="checkbox" name="filter" value="click"> Click
+            </label>
+            <label>
+                <input type="checkbox" name="filter" value="glue-down"> Glue Down
+            </label>
+        </form>
+    </aside>
+
+    <!-- Main Product Grid -->
+    <main class="product-grid">
+        <div class="product" data-category="click">
+            <img height="350" src="./images/RT01.jpg" alt="Plank Product">
+            <h4>J2 - Rustic Oak</h4>
+            <p id="prod-id">Plank RT01</p>
+            <button class="view-product-btn" onclick="window.location.href='/lvt/rt01-rustic-oak.html'">View Product</button>
+        </div><div class="product" data-category="click">
+            <img height="350" src="./images/RTP02.jpg" alt="Plank Product">
+            <h4>J2 - Golden Oak</h4>
+            <p id="prod-id">Plank RTP02</p>
+            <button class="view-product-btn" onclick="window.location.href='/lvt/rt01-rustic-oak.html'">View Product</button>
+        </div><div class="product" data-category="click">
+            <img height="350" src="./images/NT45.jpg" alt="Plank Product">
+            <h4>J2 - Taupe Brushed Oak</h4>
+            <p id="prod-id">Plank NT45</p>
+            <button class="view-product-btn" onclick="window.location.href='/lvt/rt01-rustic-oak.html'">View Product</button>
+        </div>
+        <div class="product" data-category="click">
+            <img height="350" src="./images/NTP43.jpg" alt="Plank Product">
+            <h4>J2 - Carpenters Oak</h4>
+            <p id="prod-id">Plank NTP43</p>
+            <button class="view-product-btn" onclick="window.location.href='/lvt/rt01-rustic-oak.html'">View Product</button>
+        </div>
+    </main>
+</div>
     <!-- Footer -->
     <footer id="footer" class="footer">
         <div class="footer-content">

@@ -30,3 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const filterForm = document.getElementById("filter-form");
+    const products = document.querySelectorAll(".product");
+
+    filterForm.addEventListener("change", () => {
+        const selectedFilters = Array.from(
+            filterForm.querySelectorAll("input[type='checkbox']:checked")
+        ).map((checkbox) => checkbox.value);
+
+        products.forEach((product) => {
+            const productCategory = product.getAttribute("data-category");
+            if (selectedFilters.length === 0 || selectedFilters.includes(productCategory)) {
+                product.style.display = "block"; // Show product
+            } else {
+                product.style.display = "none"; // Hide product
+            }
+        });
+    });
+});
