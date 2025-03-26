@@ -1,0 +1,116 @@
+Website Ideas
+
+
+Header
+￼
+
+- Take inspo from the row of categories of products.
+- Number on top right of website header
+- Social media in header too
+- Opening times either on header if there is room as to not make it look to cluttered, if not enough room then perhaps in the footer of the page.
+- Logo in top right of header with social media underneath it? Also search bar in the middle between the logo and contact info / times.
+
+
+Reviews
+￼
+￼
+- Customer reviews on the page somewhere near the bottom?
+
+
+Product Categories Rows
+￼
+￼
+- Dropdown menu from the different categories to see more / view the full collection of products from that category.
+- Just have the rows of products and have them clickable to go to separate page with information for product type.
+
+
+About Us Page
+￼
+￼
+￼
+- Decent chunks of information, but not too much that it is going to draw people away from wanting to read it. Paragraphs split up with pictures and other information such as attention drawing headers.
+
+
+LVT, Engineered Wood, Carpets, Laminates, Sisal, Flatweaves, Stair Runners, Taping
+
+https://www.directwoodflooring.co.uk/super-12mm-natural-oak-laminate-flooring.html
+
+Separate Pages
+
+https://www.unitedcarpetsandbeds.com/vitality-style-aqua-protect-laminate-flooring-vitality-style-aqua-protect-laminate-flooring-laminate-flooring.html
+
+
+Carpets
+   | 
+ > Sisal
+
+
+LVT
+- Click
+- Glue-Down
+
+Herringbone
+Chevron
+Plank
+
+
+
+— Product Page
+
+<div class="product-page">
+    <!-- Sidebar for Filtering -->
+    <aside class="sidebar">
+        <h3>Filter Options</h3>
+        <form id="filter-form">
+            <label>
+                <input type="checkbox" name="filter" value="click"> Click
+            </label>
+            <label>
+                <input type="checkbox" name="filter" value="glue-down"> Glue Down
+            </label>
+            <label>
+                <input type="checkbox" name="filter" value="herringbone"> Herringbone
+            </label>
+            <label>
+                <input type="checkbox" name="filter" value="chevron"> Chevron
+            </label>
+            <label>
+                <input type="checkbox" name="filter" value="plank"> Plank
+            </label>
+        </form>
+    </aside>
+
+    <!-- Main Product Grid -->
+    <main class="product-grid">
+        <div class="product" data-category="click">
+            <img src="https://www.example.com/click.jpg" alt="Click Product">
+            <h4>Click Product</h4>
+            <p>Easy to install with a click-lock system.</p>
+        </div>
+        <div class="product" data-category="glue-down">
+            <img src="https://www.example.com/glue-down.jpg" alt="Glue Down Product">
+            <h4>Glue Down Product</h4>
+            <p>Durable and secure with adhesive application.</p>
+        </div>
+        <div class="product" data-category="herringbone">
+            <img src="https://www.example.com/herringbone.jpg" alt="Herringbone Product">
+            <h4>Herringbone Product</h4>
+            <p>Classic and timeless, perfect for any room.</p>
+        </div>
+        <div class="product" data-category="chevron">
+            <img src="https://www.example.com/chevron.jpg" alt="Chevron Product">
+            <h4>Chevron Product</h4>
+            <p>Make a statement with chevron flooring.</p>
+        </div>
+        <div class="product" data-category="plank">
+            <img src="https://www.example.com/plank.jpg" alt="Plank Product">
+            <h4>Plank Product</h4>
+            <p>Get the look of real wood with plank flooring.</p>
+        </div>
+    </main>
+</div>
+
+Product Naming Scheme
+-
+J2 - Rustic Oak (Brand - Type)
+RT01 (Smaller Writing Under, ID)

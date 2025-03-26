@@ -108,7 +108,7 @@
     }
 
     const pages = [
-        { name: "LVT", image: "images/lvt.jpg" },
+        /* { name: "LVT", image: "images/lvt.jpg" },
         { name: "Engineered Wood", image: "images/engineered-wood.jpg" },
         { name: "Carpets", image: "images/carpets.jpg" },
         { name: "Laminates", image: "images/laminates.jpg" },
@@ -116,7 +116,10 @@
         { name: "Flatweaves", image: "images/flatweaves.jpg" },
         { name: "Stair Runners", image: "images/stair-runners.jpg" },
         { name: "Taping", image: "images/taping.jpg" }    ];
-
+        */
+       { name: "J2 - Rustic Oak", image: "images/RT01.jpg", url: "/lvt/rt01-rustic-oak.html" },
+       { name: "J2 - Taupe Brushed Oak", image: "images/NT45.jpg" },
+       { name: "J2 - Carpenters Oak", image: "images/NTP43.jpg" } ];
     const resultsContainer = document.getElementById("results");
 
     if (query) {
@@ -135,13 +138,7 @@
                 title.textContent = result.name;
 
                 const link = document.createElement("a");
-                if (result.name === "LVT") {
-                    link.href = "/LVT.html";
-                } else if (result.name === "Stair Runners") {
-                    link.href = "/runners.html";
-                } else {
-                link.href = `/${result.name.toLowerCase().replace(" ", "")}.html`;
-                } 
+                link.href = `${result.url || "/search.html"}?search=${encodeURIComponent(result.name)}`;
                 link.textContent = "View More";
             
                 link.classList.add("result-link");

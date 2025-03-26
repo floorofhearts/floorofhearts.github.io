@@ -142,13 +142,15 @@ html, body {
 /* Show dropdown on hover */
 .dropdown-parent:hover + .dropdown,
 .dropdown:hover {
-  display: flex; /* Show the dropdown */
+  /* display: flex; /* Show the dropdown */
   flex-direction: column; /* Ensure links are stacked vertically */
 }
 
 /* Show dropdown on hover */
 .dropdown-parent-active:hover + .dropdown,
 .dropdown:hover {
+
+  /* <<< REMOVE THIS COMMENT LINE TO RE-ADD DROPDOWN <<<  
   display: flex; /* Show the dropdown */
   flex-direction: column; /* Ensure links are stacked vertically */
   background-color: #606060; /* Highlight the active link */
@@ -821,61 +823,53 @@ nav a:hover {
 }
 
 /* Main Content */
-/* Center the product page */
-.product-page {
-  max-width: 800px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 20px; /* Add padding for spacing */
-  text-align: center; /* Center-align the text inside the container */
-  background-color: #f9f9f9; /* Optional: Add a background color */
-  border-radius: 10px; /* Optional: Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+/* Product Specifications Section */
+.product-specifications {
+  margin-top: 40px;
+  text-align: center;
 }
 
-/* Center the product images */
-.product-images {
-  display: flex;
-  justify-content: center; /* Center the images horizontally */
-  gap: 20px; /* Add spacing between images */
+.product-specifications h2 {
+  font-size: 24px;
+  color: #333;
   margin-bottom: 20px;
 }
 
-/* Style individual product images */
-.product-image {
-  max-width: 300px;
-  border-radius: 8px;
+.specifications-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the product features */
-.product-features ul {
-  list-style: none;
-  padding: 0;
-  text-align: left; /* Align features to the left */
-  margin: 0 auto; /* Center the list */
-  max-width: 600px; /* Limit the width of the list */
+.specifications-table th,
+.specifications-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.product-features li {
-  margin: 10px 0;
-  font-size: 1rem;
+.specifications-table th {
+  background-color: #0073e6;
+  color: white;
+  font-weight: bold;
 }
 
-/* Style the call-to-action button */
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #828282;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.specifications-table tr:last-child td {
+  border-bottom: none;
 }
 
-.cta-button:hover {
-  background-color: #0056b3;
+.specifications-table td {
+  color: #555;
 }
 
+.specifications-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 /* Footer */
 .footer {
   background-color: #222;
