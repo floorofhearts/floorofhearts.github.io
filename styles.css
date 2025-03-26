@@ -1362,3 +1362,63 @@ nav a:hover {
 .view-product-btn:active {
   transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+  /* Adjust the product page layout for mobile */
+  .product-page {
+      flex-direction: column; /* Stack the sidebar and product grid vertically */
+      gap: 0; /* Remove unnecessary gaps */
+  }
+
+  /* Move the sidebar (filters) above the product grid */
+  .sidebar {
+      order: -1; /* Move the sidebar to the top */
+      margin-bottom: 20px; /* Add spacing below the filters */
+      width: 100%; /* Make the sidebar full-width */
+      box-shadow: none; /* Remove shadow for a cleaner look */
+      padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .sidebar h3 {
+      font-size: 16px; /* Adjust font size for smaller screens */
+      margin-bottom: 10px;
+  }
+
+  .sidebar label {
+      font-size: 14px; /* Adjust label font size */
+      margin-bottom: 8px;
+  }
+
+  .sidebar input[type="checkbox"] {
+      margin-right: 8px; /* Adjust spacing for checkboxes */
+  }
+
+  /* Adjust the product grid for mobile */
+  .product-grid {
+      grid-template-columns: 1fr; /* Make products stack vertically */
+      gap: 15px; /* Reduce spacing between products */
+  }
+
+  .product {
+      padding: 10px; /* Adjust padding for smaller screens */
+      box-shadow: none; /* Simplify the design for mobile */
+  }
+
+  .product img {
+      max-width: 100%; /* Ensure images are responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+
+  .product h4 {
+      font-size: 18px; /* Adjust product title font size */
+  }
+
+  .product p {
+      font-size: 14px; /* Adjust product description font size */
+  }
+
+  .view-product-btn {
+      font-size: 14px; /* Adjust button font size */
+      padding: 8px 15px; /* Adjust button padding */
+  }
+}
